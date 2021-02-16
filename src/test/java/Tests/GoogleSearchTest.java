@@ -10,10 +10,12 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class GoogleSearchTest {
 
+    String URL = "https://www.google.com/";
+    
     @Test
     void selenideSearchTest() {
         // Открыть google
-        Selenide.open("https://www.google.com/");
+        Selenide.open(URL);
 
         // Ввести Selenide в поиск
         $(byName("q")).setValue("Selenide").pressEnter();
